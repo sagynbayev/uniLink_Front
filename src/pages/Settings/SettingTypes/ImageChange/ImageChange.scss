@@ -1,0 +1,54 @@
+@import "../../../../style.scss";
+
+.imageSettings {
+  @include themify($themes) {
+    .container {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+
+      .profileForm {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          cursor: pointer;
+
+          span {
+            font-size: 16px;
+            color: themed("textColorSoft");
+          }
+        }
+      }
+
+      .preProfilePic {
+        flex: 1;
+
+        .profilePic {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+        }
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #3057a6;
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+
+    }
+  }
+}

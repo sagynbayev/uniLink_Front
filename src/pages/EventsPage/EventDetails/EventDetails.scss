@@ -1,0 +1,108 @@
+@import "../../../style";
+
+.eventDetails{
+  @include themify($themes){
+    background-color: themed("bgSoft");
+    padding: 20px 20px;
+    height: calc(100vh - 70px);
+    .top{
+      width: 100%;
+      position: relative;
+      img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+      .info{
+        color: white;
+        position: absolute;
+        top: 225px;
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+        gap: 5px;
+        padding: 5px 10px;
+        .category{
+          font-size: 12px;
+          cursor: pointer;
+        }
+        .category:hover{
+          color: #DB4655;
+        }
+        .title{
+          font-size: 25px;
+          font-weight: bold;
+        }
+
+      }
+    }
+    .bottom{
+      display: flex;
+      padding: 40px 0px;
+      .left{
+        display: flex;
+        flex: 4;
+        padding: 20px;
+        color: themed("textColor");
+        p {
+          width: 500px;
+          word-wrap: break-word;
+          white-space: normal;
+        }
+      }
+      .right{
+        display: flex;
+        flex: 2;
+        padding: 10px 20px;
+        .container{
+          border-radius: 10px;
+          background-color: themed("bg");
+          width: 100%;
+          .date{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #DB4655;
+            color: white;
+            padding: 15px 20px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            border-radius: 10px;
+            span{
+              align-items: center;
+              font-size: 18px;
+              color: white;
+            }
+          }
+          .eventInfo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px 10px;
+            gap: 10px;
+            .item{
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              color: themed("textColorSoft");
+              span{
+                font-size: 14px;
+              }
+            }
+            button {
+              width: 100%;
+              background-color: #DB4655;
+              color: white;
+              border: none;
+              border-radius: 10px;
+              font-size: 16px;
+              padding: 10px 70px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

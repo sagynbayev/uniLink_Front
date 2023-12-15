@@ -1,0 +1,60 @@
+@import "../../../style";
+
+.event{
+  @include themify($themes) {
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.2);
+
+    border-radius: 10px;
+    background-color: themed("bg");
+    color: themed("textColor");
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    .container{
+      .top{
+        position: relative;
+        .eventPic{
+          width: 100%;
+          object-fit: cover;
+          height: 250px;
+        }
+        .topInfo{
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          padding: 0 10px;
+          .topItem{
+            display: flex;
+            position: absolute;
+            top: 220px;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.56);
+            padding: 4px 6px;
+            color: white;
+            span{
+              font-size: 11px;
+            }
+          }
+        }
+      }
+      .bottom{
+        padding: 5px 10px 10px 10px;
+        span{
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+        }
+        .commonInfo{
+          padding: 2.5px 0px;
+          span{
+            font-size: 12px;
+            color: themed("textColorSoft");
+          }
+        }
+      }
+    }
+  }
+}

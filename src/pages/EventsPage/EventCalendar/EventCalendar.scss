@@ -1,0 +1,17 @@
+@import "../../../style";
+
+.eventCalendar{
+  @include themify($themes){
+    background-color: themed("bgSoft");
+    padding: 20px 20px;
+    position: sticky;
+    top: 70px;
+    height: calc(200vh - 70px);
+    @include mobile{
+      padding: 10px;
+    }
+    @include tablet{
+      padding: 20px;
+    }
+  }
+}

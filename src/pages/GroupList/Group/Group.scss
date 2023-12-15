@@ -1,0 +1,59 @@
+@import "../../../style.scss";
+
+.group {
+  @include themify($themes) {
+    background-color: themed("bg");
+    color: themed("textColor");
+
+    .container {
+      padding: 5px 20px;
+
+      &:first-child {
+        padding: 20px 20px 5px 20px;
+      }
+
+      .groupInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .groupItems {
+          display: flex;
+          gap: 20px;
+
+          img {
+            width: 80px;
+            height: 80px;
+            //border-radius: 50%;
+            //object-fit: cover;
+            object-fit: contain;
+          }
+
+          .details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .name {
+              font-weight: 500;
+            }
+
+            .followers {
+              font-size: 12px;
+              max-width: 200px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+      hr{
+        margin: 20px 0px;
+        border: none;
+        height: 1px;
+        background-color: themed("border");
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../style.scss";
+
+.groups{
+  @include themify($themes){
+    //height: 200vh;
+    position: sticky;
+    top: 70px;
+    height: calc(200vh - 70px);
+    background-color: themed("bgSoft");
+    padding: 20px 70px;
+    border-radius: 10px;
+    @include mobile{
+      padding: 10px;
+    }
+    @include tablet{
+      padding: 20px;
+    }
+
+    .menu{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      .item{
+        padding: 20px;
+        span{
+          text-decoration: none;
+          font-weight: 500;
+          color: themed("textColor");
+          font-size: 18px;
+        }
+        span:hover{
+          color: #DB4655;
+        }
+      }
+    }
+    hr{
+      margin: -5px 0px 30px 0px;
+      border: none;
+      height: 0.5px;
+      background-color: themed("border");
+    }
+    .groupsType{
+      border-radius: 10px;
+    }
+  }
+}

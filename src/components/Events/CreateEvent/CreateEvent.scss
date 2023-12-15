@@ -1,0 +1,85 @@
+@import "../../../style.scss";
+
+.createEvent {
+  @include themify($themes) {
+    h1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .items {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+
+      form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0px 175px;
+
+        input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+          font-size: 15px;
+        }
+
+        .container {
+          padding: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 30px;
+
+          .profileForm {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .item {
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              cursor: pointer;
+
+              span {
+                font-size: 16px;
+                color: themed("textColorSoft");
+              }
+            }
+          }
+
+          .preProfilePic {
+            flex: 1;
+
+            .profilePic {
+              width: 150px;
+              height: 150px;
+              object-fit: cover;
+            }
+          }
+        }
+        .date{
+          display: flex;
+          flex-direction: column;
+        }
+
+        button {
+          padding: 10px 20px;
+          background-color: #3057a6;
+          border: none;
+          color: white;
+          font-size: 18px;
+          font-weight: bold;
+          cursor: pointer;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@import "../../style.scss";
+
+.checkout{
+  @include themify($themes){
+    height: calc(100vh - 70px);
+    background-color: themed("bgSoft");
+    padding: 20px 40px;
+    color: themed("textColor");
+
+    .selection{
+      margin-top: 50px;
+      background-color: themed("bg");
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 60px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      .item{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .picture{
+          background-color: #DB4655;
+          display: flex;
+          align-items: center;
+          padding: 3px;
+          border: none;
+          border-radius: 50%;
+          color: white;
+        }
+        .pictureText{
+          font-weight: 500;
+        }
+      }
+    }
+    .orderCheck{
+      p{
+        padding-left: 10px;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      .check{
+        align-items: center;
+        background-color: themed("bg");
+        padding: 20px;
+        justify-content: space-between;
+        color: themed("textColorSoft");
+        hr{
+
+        }
+        .ticketInfo{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          .type{
+            font-size: 14px;
+            font-weight: bold;
+          }
+          p{
+            font-size: 14px;
+          }
+        }
+        .checkPrice{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px;
+          .left{
+            span{
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+          .right{
+            font-size: 14px;
+          }
+        }
+        .total{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px;
+          .left{
+            span{
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+          .right{
+
+          }
+        }
+      }
+    }
+  }
+}
